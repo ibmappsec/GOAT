@@ -4,7 +4,7 @@ pipeline {
 	stage('Pull project code'){
 		steps {
 			echo 'downloading git directory..'
-			git 'https://github.com/WebGoat/WebGoat.git'
+			git 'https://github.com/ibmappsec/GOAT.git'
 		}
 	}
 	stage('Prepare SCA tool'){
@@ -33,7 +33,9 @@ pipeline {
 	stage('Run dependency check'){
 		steps {
 			echo 'running dependency check on java jar file'
-			sh './dependency-check/bin/dependency-check.sh --project Testing --out . --scan *.jar -f JSON --prettyPrint --failOnCVSS 7'
+			sh './dependency-check/bin/dependency-check.sh --project Testing --out m25.html --scan *.jar -f HTML --failOnCVSS 7'
+			sh './dependency-check/bin/dependency-check.sh --project Testing --out webgoat.html --scan ./webgoat-server/target/*.jar.* -f HTML --failOnCVSS 7'
+			sh './dependency-check/bin/dependency-check.sh --project Testing --out webwolf.html --scan ./webwolf/target/*.jar.* -f HTML --failOnCVSS 7'
 		}
 	}
     }
