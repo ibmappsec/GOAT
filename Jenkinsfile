@@ -24,9 +24,7 @@ pipeline {
             steps {
 		    script{
 			echo 'Packing maven project'
-			    if(!fileExists('webgoat-server-8.0.0.M25.jar')){
-				sh 'wget https://github.com/WebGoat/WebGoat/releases/download/v8.0.0.M25/webgoat-server-8.0.0.M25.jar'		    
-			    }
+			    sh 'mvn clean install'
 		    }
             }
         }
