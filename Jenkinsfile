@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    tools{
-	//we have defined tool m3 under jenkins global tool config
-	maven 'M3'
-    }
     stages {
 	stage('Pull project code'){
 		steps {
