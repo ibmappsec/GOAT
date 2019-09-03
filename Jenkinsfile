@@ -24,7 +24,7 @@ pipeline {
             steps {
 		    script{
 			echo 'Packing maven project'
-			    sh 'mvn clean install'
+			    sh 'mvn install'
 		    }
             }
         }
