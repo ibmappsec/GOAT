@@ -7,12 +7,12 @@ pipeline {
 			git 'https://github.com/ibmappsec/GOAT.git'
 		}
 	}
-	stage('Check git history'){
-		steps{
-			echo 'running talisman to check project history for secrets'
-			sh '~/.talisman/bin/talisman_linux_amd64 --scan'
-		}
-	}   
+//	stage('Check git history'){
+//		steps{
+//			echo 'running talisman to check project history for secrets'
+//			sh '~/.talisman/bin/talisman_linux_amd64 --scan'
+//		}
+//	}   
 	stage('Prepare SCA tool'){
 		steps {
 			script{				
