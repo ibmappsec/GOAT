@@ -4,3 +4,4 @@ test 2
 test 3
 
 AWSKEY = "AKIA1975SYEDSHAHDOBZ"
+"FooBar Key": "-----BEGIN RSA PRIVATE KEY-----"
