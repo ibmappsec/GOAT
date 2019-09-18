@@ -4,5 +4,4 @@ test 2
 test 3
 test trigger
 
-AWSKEY = "AKIA1975SYEDSHAHDOBZ"
-"FooBar Key": "-----BEGIN RSA PRIVATE KEY-----"
+
