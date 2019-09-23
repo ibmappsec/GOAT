@@ -5,5 +5,3 @@ test 3
 test trigger
 test MAX_DEPTH
 
-"RSA private key": "-----BEGIN EC PRIVATE KEY-----"
-
